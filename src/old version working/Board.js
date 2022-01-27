@@ -59,9 +59,9 @@ export default class Board extends React.Component {
   render() {
     return (
 	
-      <div className="Board" >
-        <div className="container-fluid" >
-          <div className="row" >
+      <div className="Board">
+        <div className="container-fluid">
+          <div className="row">
             <div className="col-md-4">
               {this.renderSwimlane('Backlog', this.state.clients.backlog, this.swimlanes.backlog)}
             </div>
@@ -77,7 +77,6 @@ export default class Board extends React.Component {
 		);
 	
 	}
-
 	
 }
 //		ref={this.dragulaDecorator} ref={this.dragulaDecorator} {Dragula.dragula([document.getElementsByClassName('Swimlane-dragColumn')])} 

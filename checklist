@@ -1,0 +1,10 @@
+Acceptance Criteria
+
+In the "Shipping Requests" tab of the application, all tasks should now show in the backlog swimlane
+All swimlanes should have the class "Swimlane-column"
+There should be three swimlanes
+When a user drags a card up or down, it reorders the card (frontend only)
+When a user drags a card to a new swimlane, it stays in the swimlane
+Find a storyboard and a designed version of the page in the resources section below
+When a card changes swimlane, it should change color (backlog = grey, in progress = blue, complete = green)
+Use the Dragula tool to make this happen

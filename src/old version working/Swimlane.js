@@ -20,22 +20,18 @@ export default class Swimlane extends React.Component {
     return (
       <div className="Swimlane-column" >
         <div className="Swimlane-title">{this.props.name}</div>
-        <div id = {this.props.name} className="Swimlane-dragColumn" ref={this.props.dragulaRef} ref={this.dragulaDecorator}>
+        <div className="Swimlane-dragColumn" ref={this.props.dragulaRef} ref={this.dragulaDecorator}>
           {cards}
         </div>
       </div>);
   }
- 
+
   dragulaDecorator = (componentBackingInstance) => {
     if (componentBackingInstance) {
       let options = {};
-	  
-          Dragula([componentBackingInstance, document.getElementById('In Progress'), document.getElementById('Complete')], options).on('drop', function(el,target) {
-   
-         console.log(target.id);
-         console.log(el);
-         
-        });
-    	}
+	    console.log(componentBackingInstance);
+      Dragula([componentBackingInstance], options);
+	}
     };
+	
 }

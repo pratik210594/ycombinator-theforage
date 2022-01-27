@@ -12,7 +12,17 @@
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
-  
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.Card-grey:hover{
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
+  background-color: rgb(0,0,0,0.1);
+   transition: opacity 0.4s ease-in-out;
 }
 
 .Card-blue {

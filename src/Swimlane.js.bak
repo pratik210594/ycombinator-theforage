@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import './Swimlane.css';
+import Board from './Board';
 import Dragula from 'dragula';
 import 'C:/xampp/htdocs/YCombinator/shiptivitas-1/node_modules/dragula/dist/dragula.css';
 
@@ -18,24 +19,18 @@ export default class Swimlane extends React.Component {
       );
     })
     return (
-      <div className="Swimlane-column" >
+      <div className="Swimlane-column">
         <div className="Swimlane-title">{this.props.name}</div>
-        <div id = {this.props.name} className="Swimlane-dragColumn" ref={this.props.dragulaRef} ref={this.dragulaDecorator}>
+        <div className="Swimlane-dragColumn" ref={this.props.dragulaRef} ref={this.dragulaDecorator}>
           {cards}
         </div>
       </div>);
   }
- 
-  dragulaDecorator = (componentBackingInstance) => {
+	dragulaDecorator = (componentBackingInstance) => {
     if (componentBackingInstance) {
-      let options = {};
-	  
-          Dragula([componentBackingInstance, document.getElementById('In Progress'), document.getElementById('Complete')], options).on('drop', function(el,target) {
-   
-         console.log(target.id);
-         console.log(el);
-         
-        });
-    	}
+      let options = { };
+	  console.log(componentBackingInstance);
+      Dragula([componentBackingInstance], options);
+	}
     };
 }

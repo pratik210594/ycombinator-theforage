@@ -1,6 +1,6 @@
 import React from 'react';
 import './Card.css';
-
+import Board from 'C:/xampp/htdocs/YCombinator/shiptivitas-1/src/Board.js';
 
 export default class Card extends React.Component {
   render() {
@@ -19,4 +19,5 @@ export default class Card extends React.Component {
     );
 	
   }
+
 }
